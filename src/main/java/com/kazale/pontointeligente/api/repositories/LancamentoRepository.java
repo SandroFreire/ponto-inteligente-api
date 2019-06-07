@@ -12,6 +12,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.kazale.pontointeligente.api.entities.Funcionario;
 import com.kazale.pontointeligente.api.entities.Lancamento;
 
 @Transactional(readOnly = true)
@@ -24,9 +25,9 @@ public interface LancamentoRepository extends JpaRepository<Lancamento, Long> {
 
 	Page<Lancamento> findByFuncionarioId(@Param("funcionarioId") Long funcionarioId, Pageable pageable);
 	
-	Lancamento findOne(Long id);
+	Optional<Lancamento> findById(Long id);
 	
-	void delete(Long id);
+	void deleteById(Long id);
 	
 	
 }

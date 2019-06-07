@@ -2,6 +2,8 @@ package com.kazale.pontointeligente.api.services;
 
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.kazale.pontointeligente.api.entities.Funcionario;
 
 public interface FuncionarioService {
